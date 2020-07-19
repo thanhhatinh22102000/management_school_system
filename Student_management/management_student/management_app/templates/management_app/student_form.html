@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Sinh viên update</h2>
+<div id="body">
+    <form method="post">
+        {% csrf_token %}
+        <label for="">Name</label><br/>
+        <li>{{ form.name }}</li>
+        <label for="">Email</label><br/>
+        <li>{{ form.email }}</li>
+        <label for="">Address</label>
+        <li>{{ form.address}}</li>
+        <label for="">Gender</label>
+        <li>{{ form.gender}}</li>
+        <label for="">Password</label>
+        <li>{{ form.password}}</li>
+        <input type="submit" value="Submit" />
+    </form>
+</div>
+</body>
+</html>

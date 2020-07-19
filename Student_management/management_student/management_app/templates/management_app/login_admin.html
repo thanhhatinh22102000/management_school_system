@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'management_app/css_login.css' %}">
+</head>
+<body>
+    <div class="login">
+        <h1>Login here</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <p>Username</p>
+            <input type="text" name="taikhoan">
+            <p>Password</p>
+            <input type="password" name="matkhau">
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>

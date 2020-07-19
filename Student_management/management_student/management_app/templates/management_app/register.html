@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #body{
+            width:400px;
+            hight:600px;
+            background-color:#BDBDBD;
+        }
+        #body label{
+            margin-top:15px;
+        }
+        #body li{
+            list-style:none;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div id="body">
+            <form action="." method="POST">
+                <li>{% csrf_token %}</li>
+                <label>Tài Khoản</label><br/>
+                <li>{{form.username}}</li><br/>
+                <label>Email</label><br/>
+                <li>{{form.email}}</li><br/>
+                <label>Mật khẩu</label><br/>
+                <li>{{form.password1}}</li><br/>
+                <label>Nhập lại mật khẩu</label><br/>
+                <li>{{form.password2}}</li><br/>
+                <input type="submit" value="Đăng ký"/>
+            </form>
+        </div>
+    </center>
+</body>

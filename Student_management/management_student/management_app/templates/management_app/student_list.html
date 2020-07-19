@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1{
+            color:red;
+            font-size:30px;
+            text-align:center;
+        }
+        a:hover{
+            color: blue;
+            text-decoration: none;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        table,th,td{
+            border:1px solid black;
+            border-collapse:collapse;
+            background: #D8D8D8;
+        }
+        #body li{
+            padding:10px 0px;
+            list-style:none;
+        }
+    </style>
+</head>
+<body>
+<h1>Thông tin sinh viên</h1>
+<div id="head">
+    <center>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Gender</th>
+                <th>Password</th>
+                <th>View</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in student %}
+        <tr>
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.address}}</td>
+            <td>{{item.gender}}</td>
+            <td>{{item.password}}</td>
+            <td><a href=" {% url "student_view" item.id%}">view</a></td>
+            <td><a href="{% url "update_student" item.id %}">update</a></td>
+            <td><a href="{% url "delete_student" item.id %}">delete</a></td>
+        </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+        <h4><a href="{% url "create_student" %}">Create Student</a></h4>
+    </center>
+</div>
+<div id="body">
+    {% load widget_tweaks %}
+    <center>
+    <form method="get">
+        <label for="">Search by name</label>
+        <li>{% render_field form.name class="form-control" %}</li>
+        <li><button class="btn btn-primary btn-lg btn-block" type="submit">Tìm kiếm</button></li>
+    </form>
+    </center>
+</div>
+</body>
+</html>

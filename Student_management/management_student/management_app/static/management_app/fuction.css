@@ -1,0 +1,27 @@
+#head_trangchu{
+	width: 1350px;
+	height: 700px;
+  	background-image: url('tr3.jpg');
+}
+#head_trangchu p{
+	color: red;
+	font-size: 60px;
+	text-align: center;
+}
+#head_trangchu li{
+    list-style:none;
+    text-align:center;
+}
+
+#head_trangchu a{
+    text-decoration:none;
+    color:white;
+    font-size:17px;
+}
+.btn1{
+    margin: 10px;
+    width: 300px;
+    height: 50px;
+    border: none;
+    background: #00FF00;
+}

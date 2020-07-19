@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        table,th,td{
+            border:1px solid black;
+        }
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Họ tên</th>
+                <th>email</th>
+                <th>address</th>
+                <th>password</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in staff %}
+        <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.address}}</td>
+            <td>{{item.password}}</td>
+        </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</center>
+</body>
+</html>

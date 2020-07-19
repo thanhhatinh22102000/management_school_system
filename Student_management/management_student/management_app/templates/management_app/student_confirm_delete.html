@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1{
+            color:red;
+            font-size:23px;
+        }
+    </style>
+</head>
+<body>
+<center>
+<h1>Sinh viên delete</h1>
+<form method="post">{% csrf_token %}
+    Are you sure you want to delete <b>"{{ object }}"</b> ?
+    <input type="submit" value="Submit" />
+</form>
+</center>
+</body>
+</html>

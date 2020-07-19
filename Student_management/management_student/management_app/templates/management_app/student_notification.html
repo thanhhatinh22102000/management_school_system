@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    table,th,td{
+            border:1px solid black;
+        }
+        table {
+            border-collapse: collapse;
+        }
+</head>
+<body>
+<center>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Student_ID</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in n_student %}
+        <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.student_id}}</td>
+            <td>{{item.message}}</td>
+        </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</center>
+</body>
+</html>

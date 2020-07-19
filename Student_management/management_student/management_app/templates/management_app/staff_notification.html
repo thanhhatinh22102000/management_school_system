@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        table,th,td{
+            border:1px solid black;
+        }
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Staff_ID</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in n_staff %}
+        <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.staff_id}}</td>
+            <td>{{item.message}}</td>
+        </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</center>
+</body>
+</html>

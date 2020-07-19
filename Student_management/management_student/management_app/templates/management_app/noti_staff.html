@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #form{
+            width:400px;
+            hight:600px;
+            background-color:#BDBDBD;
+            margin-top:100px;
+        }
+        li{
+            list-style:none;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <div id="form">
+    <form action="{% url 'noti_sta' %}" method="POST">
+        {% csrf_token %}
+        <label>Staff ID : </label>
+        {{ form.staff_id}}<br/>
+        {{ form.message}}<br/>
+        <input type="submit" />
+    </form>
+    </div>
+</center>
+</body>
+</html>
